@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestätigungsseite</title>
+    <link rel="icon" href="logo2.png" type="image/png" sizes="16x16">
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 56px; text-decoration: underline;">Bestätigung</h1>
+    <div id="confirmation" style="text-align: center;"></div>
+
+    <script>
+       
+        var formData = JSON.parse(localStorage.getItem("formData"));
+
+       
+        if (formData) {
+            document.getElementById('confirmation').innerHTML = `
+                <p>Name: ${formData.name}</p>
+                <p>Email: ${formData.email}</p>
+                <p>Postleitzahl: ${formData.postleitzahl}</p>
+                <p>Straße: ${formData.straße}</p>
+                <p>Datum: ${formData.datum}</p>
+                <p>Uhrzeit: ${formData.uhrzeit}</p>
+                <p>Spendengebiet: ${formData.spendengebiet}</p>
+            `;
+        } else {
+            document.getElementById('confirmation').innerHTML = '<p>Error.</p>';
+        }
+    </script>
+</body>
+</html>

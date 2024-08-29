@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestätigungsseite</title>
+    <link rel="icon" href="logo2.png" type="image/png" sizes="16x16">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestätigung Ihrer Spende</title>
+</head>
+<body>
+ <h1 style="text-align: center; font-size: 56px; text-decoration: underline;">Bestätigung</h1>
+
+<div style="text-align: center;">
+  <p>Vielen Dank für Ihre Spende!</p>
+  <p>Sie haben folgende Kleidung gespendet: <span id="artDerKleidung"></span></p>
+  <p>Die Spende wird in folgendem Gebiet verteilt: <span id="spendenGebiet"></span></p>
+</div>
+
+<script>
+  
+  var formData = JSON.parse(localStorage.getItem("formData"));
+
+ 
+  document.getElementById("artDerKleidung").innerHTML = formData.artDerKleidung;
+  document.getElementById("spendenGebiet").innerHTML = formData.spendengebiet;
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
